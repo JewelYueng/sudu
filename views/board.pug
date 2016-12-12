@@ -1,0 +1,34 @@
+//
+   Created by jewel on 2016/12/8.
+html
+    head
+        title 数独
+    body
+        != css("./public/stylesheets/materialize.min.css")
+        != css("./public/stylesheets/style.css")
+        .board
+            h1.level= levelName
+            .timeBar 时间：
+                span.timePicker 0
+                span s
+        .boardPanel
+            each boardLine,lineIndex in board
+                div.row.s9
+                    each cell,index in boardLine
+                        if cell === 0
+                            input.editable.col.s1(onkeyup= "checkInput(this)")
+                        else
+                            span.cell.col.s1= cell
+
+        .resultBar
+            .row.s6
+                .input-field.col.s6
+                    input#name.validate(placeholder="Your name",type= "text")
+                    label(for='name') 你的名字
+            div
+                a.submitResult 提交结果
+            div
+                a.checkResult 检查
+        != js("jquery-2.1.1.min.js")
+        != js('materialize.min.js')
+        != js("board.js")

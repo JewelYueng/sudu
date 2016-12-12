@@ -1,0 +1,47 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+.hello{
+    text-align: center;
+}
+.hello div{
+    overflow: auto;
+    margin: 50px;
+
+}
+.btnBar {
+    background-color: lightblue;
+    padding: 20px;
+    line-height: 50px;
+}
+.editable,.cell{
+    position: relative;
+    width: 21px;
+
+    text-align: center;
+}
+.game{
+    text-align: center;
+}
+.game div{
+    margin-bottom: 30px;
+}
+.cell{
+    line-height: 44px;
+}
+.boardPanel{
+    max-width: 680px;
+    max-height: 680px;
+    text-align: center;
+    margin: 30px auto;
+}
+.row .col.s1{
+    margin-right: 7px;
+}

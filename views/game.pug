@@ -1,0 +1,19 @@
+//
+   Created by jewel on 2016/12/8.
+
+html
+    head
+        title 数独
+    body
+        != css("./public/stylesheets/style.css")
+        .game
+            h1 开始一个数独游戏
+            h2 选择关卡
+            div
+                a.btnBar(href= '/game/1') level1
+            div
+                a.btnBar(href= '/game/2') level2
+            div
+                a.btnBar(href= '/game/3') level3
+            div
+                a.btnBar(href= '/game/4') level4

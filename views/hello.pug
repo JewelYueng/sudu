@@ -1,0 +1,17 @@
+//
+   Created by jewel on 2016/12/8.
+
+html
+    head
+        title= webTitle
+    body
+        //link(rel='stylesheet', href= "./public/stylesheets/style.css")
+        .hello
+            != css("./public/stylesheets/style.css")
+            h1= helloText
+            div
+                a.btnBar(href= "/introduce") 游戏介绍
+            div
+                a.btnBar(href= "/start") 开始游戏
+            div
+                a.btnBar(href= "/contact") 联系我们
