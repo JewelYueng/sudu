@@ -8,6 +8,7 @@
 
 # 要注意的地方
 -有一个开放给其他端口的接口‘／getRank’
+```javascript
     //开放给其他端的接口
     router.get('/getRank', function (req, res, next) {
         rank.find_all(Rank,function (err, doc) {
@@ -19,3 +20,4 @@
             }
         })
     })
+```
