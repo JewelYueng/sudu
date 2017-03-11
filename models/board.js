@@ -33,7 +33,7 @@ module.exports.checkValid = function(board){
 }
 
 function validRepeat(array){
-    console.log(array)
+
     let map = [];
     for(let i = 0; i < 9 ; i++){
         if(array[i] == ".") return false;

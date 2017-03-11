@@ -1,0 +1,39 @@
+//
+   Created by jewel on 2016/12/12.
+html
+    head
+        title 排行榜
+    body
+        != css("./public/stylesheets/materialize.min.css")
+        != css("./public/stylesheets/style.css")
+        ul.tabs.tabs-transparent
+            li.tab
+                a.active(href='#localRank') 本区排行榜
+            li.tab
+                a(href='#totalRank') 全服排行榜
+        .rankkkk
+            #localRank
+                .localRank
+                    .row
+                        .col.s4 用户名
+                        .col.s4 关卡
+                        .col.s4 时间
+                    each rank in localRank
+                        .rankItem.row
+                            .col.s4.name= rank.uname
+                            .col.s4.level= rank.curLevel
+                            .col.s4.time= rank.time
+            #totalRank
+                .totalRank
+                    .row
+                        .col.s4 用户名
+                        .col.s4 关卡
+                        .col.s4 时间
+                    each rank in totalRank
+                        .rankItem.row
+                            .col.s4.name= rank.uname
+                            .col.s4.level= rank.level
+                            .col.s4.time= rank.time
+            a.returnBtn(href= '/') 返回
+            != js("jquery-2.1.1.min.js")
+            != js('materialize.min.js')

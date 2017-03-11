@@ -5,4 +5,8 @@ html
     head
         title 游戏介绍
     body
+      .introduce
+        != css("./public/stylesheets/style.css")
         h1 这是一个数独游戏
+        h4 玩家需要根据9×9盘面上的已知数字，推理出所有剩余空格的数字，并满足每一行、每一列、每一个粗线宫（3*3）内的数字均含1-9，不重复。
+        a.returnBtn(href= '/') 返回

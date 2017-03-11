@@ -2,46 +2,96 @@ body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
     color: gray;
     text-decoration: none;
     cursor: pointer;
 }
+.contact{
+    text-align: center;
+    padding-top: 150px;
+}
+.contact h4{
+    font-weight: lighter;
+}
+.introduce{
+    text-align: center;
+    padding-top: 200px;
+}
 .hello{
     text-align: center;
+    padding-top: 100px;
 }
 .hello div{
     overflow: auto;
     margin: 50px;
-
 }
 .btnBar {
     background-color: lightblue;
+    border:7px double white; 
     padding: 20px;
     line-height: 50px;
 }
 .editable,.cell{
     position: relative;
     width: 21px;
-
     text-align: center;
 }
 .game{
     text-align: center;
+    padding-top: 100px;
+}
+.game h2{
+    margin-bottom: 50px;
 }
 .game div{
     margin-bottom: 30px;
 }
+.resultttt{
+    text-align: center;
+    padding-top: 200px;
+}
+.rankkkk{
+    text-align: center;
+}
+.rankItem{
+    margin-top: 20px;
+}
+.row{
+    margin-bottom: 0px;
+}
 .cell{
     line-height: 44px;
+}
+.col.s1.block{
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+}
+.col.s1.block.colline{
+    border-right: 2px solid black;
+}
+.col.s1.block.rowline{
+    border-bottom: 2px solid black;
 }
 .boardPanel{
     max-width: 680px;
     max-height: 680px;
     text-align: center;
     margin: 30px auto;
+    /*border:3px inset gray;*/
 }
-.row .col.s1{
-    margin-right: 7px;
+.row .col{
+   margin-bottom:0px;
+   margin-top: 0px;
+}
+.editable.col.s1.block{
+  height: 46px;
+}
+.editable.col.s1.block.rowline{
+  height: 47px;
+}
+.localRank,.totalRank{
+    margin-top: 30px;
+    margin-bottom:30px;
 }

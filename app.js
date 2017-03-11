@@ -5,7 +5,7 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let assets = require('connect-assets');
-
+let request = require('request');
 let routes = require('./routes/index');
 let users = require('./routes/users');
 global.levels = require ('./models/level');
@@ -19,6 +19,7 @@ let Cat = mongoose.model('Cat', {
     friends: [String],
     age: Number,
 });
+
 // let kitty = new Cat({ name: 'Zildjian', friends: ['tom', 'jerry']});
 // kitty.age = 4;
 // kitty.save(function (err) {

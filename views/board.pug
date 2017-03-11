@@ -15,10 +15,28 @@ html
             each boardLine,lineIndex in board
                 div.row.s9
                     each cell,index in boardLine
-                        if cell === 0
-                            input.editable.col.s1(onkeyup= "checkInput(this)")
+                        if lineIndex === 2||lineIndex === 5
+                            if index === 2 || index === 5
+                                if cell === 0
+                                    input.editable.col.s1.block.colLine.rowLine(onkeyup= "checkInput(this)")
+                                else
+                                    span.cell.col.s1.block.colLine.rowLine= cell
+                            else
+                                if cell === 0
+                                    input.editable.col.s1.block.rowLine(onkeyup= "checkInput(this)")
+                                else
+                                    span.cell.col.s1.block.rowLine= cell
                         else
-                            span.cell.col.s1= cell
+                            if index === 2 || index === 5
+                                if cell === 0
+                                    input.editable.col.s1.block.colLine(onkeyup= "checkInput(this)")
+                                else
+                                    span.cell.col.s1.block.colLine= cell
+                            else
+                                if cell === 0
+                                    input.editable.col.s1.block(onkeyup= "checkInput(this)")
+                                else
+                                    span.cell.col.s1.block= cell
 
         .resultBar
             .row.s6

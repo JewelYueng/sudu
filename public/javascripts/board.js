@@ -27,14 +27,15 @@ function getboard(){
             let isEditable = $(cells[j]).hasClass('editable')
             let value = 0
             if (isEditable){
-                if($(cells[j]).value){
-                    value = $(cells[j]).value
+                console.log($(cells[j]).val())
+                if($(cells[j]).val()){
+                    value = $(cells[j]).val()
                 }
                 else {
                     value = '.'
                 }
             }
-            else value = parseInt($(cells[j]).html())
+            else value = $(cells[j]).html()
             board[i][j] = value;
         }
     }
@@ -43,6 +44,7 @@ function getboard(){
 }
 function checkBoard(board) {
     console.log('come into model')
+    console.log(board)
     let boxs = [[],[],[],[],[],[],[],[],[]];
     for (let i = 0;i < 9 ; i++){
         let cRow = []
@@ -123,7 +125,7 @@ $(document).ready(function () {
         let level = $('.level').html()
         if (name != "") {
             let boardInfo = {
-                "board": board,
+                "board": getboard(),
                 'username': name,
                 'level': level,
                 "time": time
@@ -136,19 +138,22 @@ $(document).ready(function () {
                 traditional: true,
                 success: function (data) {
                     console.log(data.msg)
+                    location.href = '/game/result'
                 },
                 error: function (data) {
                     console.log("网络访问出错，提交失败")
                 }
             })
-            location.href = '/game/result'
+
         }
         else{
             alert('请填写你的姓名')
         }
     })
     $(".checkResult").click(()=>{
-        if(checkBoard(getboard())){
+        let board = getboard()
+        console.log(board)
+        if(checkBoard(board)){
             alert('正确')
         }else{
             alert("答案有错，请修改后提交")
